@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.bg-colour{
+    background-color: #22242A;
+}
+
+/* nav on top */
+.sticky{
+    z-index:100000;
+    position: sticky;
+    top: 0px;
+}
+
+.nav-colour{
+    background-color: #042287;
+}
+
+.goldShi{
+    color: #E8BB53
+}
+
+.changefontnav{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* content config */
+.nameFont {
+    font-size: 50px;
+}
+.content-colour {
+    color: #A6B0D9;
+}
+
+.content-bg {
+    background-color: #2E3038;
+}
+
+.content-bg2 {
+    background-color: #393C46;
+}
+
+.intro-text{
+    font-size:large;
+    font-family: 'Roboto', sans-serif;
+}
+
+.startFont {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.custom-border {
+    border: 4px solid #E8BB53;
+}
+
+.custom-inner-border {
+    border: 2px solid #E8BB53;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #0d6efd;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid #0d6efd;
+    border-radius: 50%;
+    top: 15px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::after {
+    right: -10px;
+}
+
+.right::after {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #393C46;
+    border-radius: 8px;
+    box-shadow: -1px 5px 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+.timeline::before {
+    left: 31px;
+}
+
+.timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+}
+
+.timeline-item.left::after, 
+.timeline-item.right::after {
+    left: 21px;
+}
+
+.right {
+    left: 0;
+}
+}
+
+
+/* footer config */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: -100px; /* Initially hidden */
+    width: 100%;
+    transition: bottom 0.3s ease;
+}
+
+.footer.visible {
+bottom: 0; /* Slide up into view */
+}
