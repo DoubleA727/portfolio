@@ -48,7 +48,8 @@
         <p class="nameFont goldShi"><br>Alan Ng</p>
         <p class="fs-5">Aspiring Full-Stack Developer</p>
         <p class="fs-6">
-          Second-Year Information Technology student at Singapore Polytechnic | Specializing in Software Development
+          Second-Year Information Technology student at Singapore Polytechnic | Specializing in Software Development<br><br>
+          <a href="./images/Resume.jpg" target="_blank" class="content-colour">Resume</a>
         </p>
       </div>
     </div>
@@ -62,6 +63,7 @@
           I'm driven by curiosity and a love for learning, especially in tech and coding. I take pride in applying
           what I learn creatively and always approach challenges with optimism and perseverance.
         </p>
+        
       </div>
 
       <!-- Academic Timeline -->
@@ -113,8 +115,83 @@
           </div>
       </div>
   </div> <!-- End Timeline -->
-  </div>
+    <!-- Certificates Dropdown -->
+    <div class="text-center my-4">
+      <button class="dropdown-btn bg-transparent border-0 goldShi fs-3 fw-bold" id="dropdownBtn">
+        Certificates
+      </button>
+      <div class="dropdown-content container mt-2" id="dropdownContent">
+        <div class="row g-4">
+          <!-- Certificate 1 -->
+          <div class="col-md-4">
+            <div class="certificate card h-100 content-bg2 content-colour">
+              <img src="./images/SP.png" class="card-img-top certificate-image" alt="Edusave Certificate 2024" style="object-fit: contain; height: 120px; padding: 20px;">
+              <div class="card-body certificate-details">
+                <a href="./images/Cert1.jpg" target="_blank" class="text-decoration-none">
+                  <h5 class="card-title certificate-title goldShi">Edusave Certificate of Academic Achievement 2024</h5>
+                </a>
+                <p class="card-text certificate-issuer"><small>Issued by: Ministry of Education, Singapore</small></p>
+                <p class="card-text certificate-date"><small>Date: Jan 2024</small></p>
+                <p class="card-text certificate-description">
+                  Awarded for academic excellence at Singapore Polytechnic.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificate 2 -->
+          <div class="col-md-4">
+            <div class="certificate card h-100 content-bg2 content-colour">
+              <img src="./images/Regent.png" class="card-img-top certificate-image" alt="EAGLES Award 2022" style="object-fit: contain; height: 120px; padding: 10px;">
+              <div class="card-body certificate-details">
+                <a href="./images/Cert2.jpg" target="_blank" class="text-decoration-none">
+                  <h5 class="card-title certificate-title goldShi">Edusave EAGLES Award 2022</h5>
+                </a>
+                <p class="card-text certificate-issuer"><small>Issued by: Ministry of Education, Singapore</small></p>
+                <p class="card-text certificate-date"><small>Date: Jan 2022</small></p>
+                <p class="card-text certificate-description">
+                  Award for Achievement, Good Leadership and Service at Regent Secondary School.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Certificate 3 -->
+          <div class="col-md-4">
+            <div class="certificate card h-100 content-bg2 content-colour">
+              <img src="./images/Regent.png" class="card-img-top certificate-image" alt="Edusave Scholarship" style="object-fit: contain; height: 120px; padding: 10px;">
+              <div class="card-body certificate-details">
+                <a href="./images/Cert3.jpg" target="_blank" class="text-decoration-none">
+                  <h5 class="card-title certificate-title goldShi">Edusave Scholarship 2022</h5>
+                </a>
+                <p class="card-text certificate-issuer"><small>Issued by: Ministry of Education, Singapore</small></p>
+                <p class="card-text certificate-date"><small>Date: Jan 2022</small></p>
+                <p class="card-text certificate-description">
+                  Awarded for academic excellence at Regent Secondary School.
+                </p>
+              </div>
+            </div>
+          </div>
 
+          <!-- Certificate 4 -->
+          <div class="col-md-4">
+            <div class="certificate card h-100 content-bg2 content-colour">
+              <img src="./images/Regent.png" class="card-img-top certificate-image" alt="Edusave Scholarship 2019" style="object-fit: contain; height: 120px; padding: 10px;">
+              <div class="card-body certificate-details">
+                <a href="./images/Cert4.jpg" target="_blank" class="text-decoration-none">
+                  <h5 class="card-title certificate-title goldShi">Edusave Scholarship 2019</h5>
+                </a>
+                <p class="card-text certificate-issuer"><small>Issued by: Ministry of Education, Singapore</small></p>
+                <p class="card-text certificate-date"><small>Date: Jan 2019</small></p>
+                <p class="card-text certificate-description">
+                  Awarded for academic excellence at Regent Secondary School.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Skills & Contacts -->
     <div class="content-bg2 content-colour mt-5 mx-5 py-4 border border-4 border-warning-subtle rounded-5">
       <div class="row">
@@ -163,5 +240,26 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script src="./js/across.js"></script>
+  <script>
+        document.getElementById('dropdownBtn').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('dropdownContent').classList.toggle('show');
+        });
+
+        // Close the dropdown if clicked outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var buttons = document.getElementsByClassName("dropdown-btn");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                        buttons[i].classList.remove('active');
+                    }
+                }
+            }
+        });
+  </script>
 </body>
 </html>
