@@ -161,7 +161,7 @@
   
   .dropdown-content.show {
     display: block;
-  }
+  } 
   
   .certificate {
     transition: transform 0.3s ease;
