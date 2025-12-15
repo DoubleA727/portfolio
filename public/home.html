@@ -4,116 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home</title>
-
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <!-- External CSS -->
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/pageInit.css">
+  <link rel="stylesheet" href="./css/home.css">
 </head>
 <body class="bg-colour">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky border-bottom border-2 border-dark text-light nav-colour">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
+<div id="navbar-container"></div>
+
+<!-- Main Content -->
+<div class="content-bg mx-5 rounded-5 mb-5 pb-4">
+  <!-- Intro Section -->
+  <div class="mt-3 mb-4 mx-5 row pt-4">
+    <div class="col-6 text-center">
+      <img src="./images/PFP.png" height="360" width="370" class="rounded-circle border border-2 border-warning-subtle" alt="Profile Picture">
+    </div>
+    <div class="col-6 pe-5 startFont content-colour mt-3">
+      <p class="nameFont goldShi"><br>Alan Ng</p>
+      <p class="fs-5">Aspiring Full-Stack Developer</p>
+      <p class="fs-6">
+        Second-Year Information Technology student at Singapore Polytechnic | Specializing in Software Development<br><br>
+        <a href="./images/Alan Ng Resume.pdf" target="_blank" class="content-colour">Resume</a>
+      </p>
+    </div>
+  </div>
+  <!-- About Me Section -->
+  <div class="content-bg2 content-colour mt-5 mx-5 pb-4 border border-4 border-warning-subtle rounded-5">
+    <h1 class="text-center pt-4 pb-3 goldShi"><strong>About Me!</strong></h1>
+    <div class="container text-center pt-4">
+      <p class="intro-text mx-3">
+        I'm a second-year IT student at Singapore Polytechnic, specializing in Software Development and IoT.
+        I'm driven by curiosity and a love for learning, especially in tech and coding. I take pride in applying
+        what I learn creatively and always approach challenges with optimism and perseverance.
+      </p>
+    </div>
+    <!-- Academic Timeline -->
+    <div class="container py-5 text-center">
+      <button class="dropdown-btn bg-transparent border-0 text-center mb-5 goldShi fs-2" id="dropdownBtn">
+        Education Timeline
       </button>
-      <h3 class="ms-4 my-0 py-0 pe-3 changefontnav">Alan Ng</h3>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item fs-5 mx-3">
-            <a class="nav-link active" href="#"><strong class="goldShi">About</strong></a>
-          </li>
-          <li class="nav-item fs-5 mx-3">
-            <a class="nav-link text-light" href="index2.html"><strong>Experiences</strong></a>
-          </li>
-          <li class="nav-item fs-5 mx-3">
-            <a class="nav-link text-light" href="index3.html"><strong>Leadership & CCA</strong></a>
-          </li>
-          <li class="nav-item fs-5 mx-3">
-            <a class="nav-link text-light" href="index4.html"><strong>Hobbies</strong></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="content-bg mx-5 rounded-5 mb-5 pb-4">
-    <!-- Intro Section -->
-    <div class="mt-3 mb-4 mx-5 row pt-4">
-      <div class="col-6 text-center">
-        <img src="./images/PFP.png" height="360" width="370" class="rounded-circle border border-2 border-warning-subtle" alt="Profile Picture">
-      </div>
-      <div class="col-6 pe-5 startFont content-colour mt-3">
-        <p class="nameFont goldShi"><br>Alan Ng</p>
-        <p class="fs-5">Aspiring Full-Stack Developer</p>
-        <p class="fs-6">
-          Second-Year Information Technology student at Singapore Polytechnic | Specializing in Software Development<br><br>
-          <a href="./images/Alan Ng Resume.pdf" target="_blank" class="content-colour">Resume</a>
-        </p>
-      </div>
-    </div>
-
-    <!-- About Me Section -->
-    <div class="content-bg2 content-colour mt-5 mx-5 pb-4 border border-4 border-warning-subtle rounded-5">
-      <h1 class="text-center pt-4 pb-3 goldShi"><strong>About Me!</strong></h1>
-      <div class="container text-center pt-4">
-        <p class="intro-text mx-3">
-          I'm a second-year IT student at Singapore Polytechnic, specializing in Software Development and IoT.
-          I'm driven by curiosity and a love for learning, especially in tech and coding. I take pride in applying
-          what I learn creatively and always approach challenges with optimism and perseverance.
-        </p>
-        
-      </div>
-
-      <!-- Academic Timeline -->
-      <div class="container py-5">
-      <h1 class="text-center mb-5 goldShi">Education</h1> 
-      <div class="timeline">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item left">
-              <div class="timeline-content">
-                  <!-- Added image -->
-                  <div class="text-center mb-3">
-                    <img src="./images/SP.png" alt="Singapore Polytechnic IT Diploma" class="rounded" width="300" style="max-height: 150px;">
-                  </div>
-                  <h3 class="h4 goldShi">Diploma in Information Technology</h3>
-                  <p class="content-bg2 fst-italic"><small>2024 - Current</small></p>
-                  <p>Singapore Polytechnic</p>
-                  <p>Persuing Certificate in Internet of Things (IOT) alongside.<br>CCA: Singapore Polytechnic Bowling Club</p>
-                  <span class="badge bg-primary">GPA: TBD (3.74)</span>
-              </div>
-          </div>
-          
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item right">
-              <div class="timeline-content">
-                  <!-- Added image -->
-                  <div class="text-center mb-3">
-                    <img src="./images/SP.png" alt="SP Logo" class="rounded" width="300" style="max-height: 150px;">
-                  </div>
-                  <h3 class="h4 goldShi">Polytechnic Foundation Programme</h3>
-                  <p class="fst-italic content-bg2"><small>2023 - 2024</small></p>
-                  <p>Singapore Polytechnic</p>
-                  <p>Transitioning into Polytechnic.<br>CCA: Singapore Polytechnic Bowling Club</p>
-                  <span class="badge bg-primary">Grade: Pass</span>
-              </div>
-          </div>
-          
-          <!-- Timeline Item 3 -->
-          <div class="timeline-item left">
-              <div class="timeline-content">
-                <!-- Added image -->
+      <div class="timeline dropdown-content container mt-2" id="dropdownContent">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item left">
+            <div class="timeline-content">
                 <div class="text-center mb-3">
-                  <img src="./images/Regent.png" alt="Regent Secondary School Logo" class="img-fluid rounded" style="max-height: 150px;">
+                  <img src="./images/SP.png" alt="Singapore Polytechnic IT Diploma" class="rounded" width="300" style="max-height: 150px;">
                 </div>
-                <h3 class="h4 goldShi">N/O Level Certificate</h3>
-                <p class="content-bg2 fst-italic"><small>2019 - 2022</small></p>
-                <p>GCE Normal Academic<br>SBB: Science, Math, English<br>CCA: Robotics</p>
-                <span class="badge bg-primary">EMB3: 6 (raw)</span>
+                <h3 class="h4 goldShi">Diploma in Information Technology</h3>
+                <p class="content-bg2 fst-italic"><small>2024 - Current</small></p>
+                <p>Singapore Polytechnic</p>
+                <p>Persuing Certificate in Internet of Things (IOT) alongside.<br>CCA: Singapore Polytechnic Bowling Club</p>
+                <span class="badge bg-primary">GPA: TBD (3.74)</span>
+            </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <div class="text-center mb-3">
+                  <img src="./images/SP.png" alt="SP Logo" class="rounded" width="300" style="max-height: 150px;">
+                </div>
+                <h3 class="h4 goldShi">Polytechnic Foundation Programme</h3>
+                <p class="fst-italic content-bg2"><small>2023 - 2024</small></p>
+                <p>Singapore Polytechnic</p>
+                <p>Transitioning into Polytechnic.<br>CCA: Singapore Polytechnic Bowling Club</p>
+                <span class="badge bg-primary">Grade: Pass</span>
+            </div>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item left">
+            <div class="timeline-content">
+              <div class="text-center mb-3">
+                <img src="./images/Regent.png" alt="Regent Secondary School Logo" class="img-fluid rounded" style="max-height: 150px;">
               </div>
-          </div>
-      </div>
+              <h3 class="h4 goldShi">N/O Level Certificate</h3>
+              <p class="content-bg2 fst-italic"><small>2019 - 2022</small></p>
+              <p>GCE Normal Academic<br>SBB: Science, Math, English<br>CCA: Robotics</p>
+              <span class="badge bg-primary">EMB3: 6 (raw)</span>
+            </div>
+        </div>
+    </div>
   </div>
   <!-- Certificates Dropdown -->
   <div class="text-center my-4">
@@ -125,7 +93,7 @@
         <!-- Director Honors Roll -->
         <div class="col-md-4">
           <div class="certificate card h-100 content-bg2 content-colour">
-            <img src="./images/SP.png" class="card-img-top certificate-image" alt="Edusave Scholarship 2019" style="object-fit: contain; height: 120px; padding: 10px;">
+            <img src="./images/SP.png" class="card-img-top certificate-image" alt="Director Honors Roll" style="object-fit: contain; height: 120px; padding: 10px;">
             <div class="card-body certificate-details">
               <a href="./images/DHonor.jpg" target="_blank" class="text-decoration-none">
                 <h5 class="card-title certificate-title goldShi">Director Honours Roll</h5>
@@ -138,7 +106,8 @@
             </div>
           </div>
         </div>
-        <!-- NYC -->
+
+        <!-- NYC Leaders -->
         <div class="col-md-4">
           <div class="certificate card h-100 content-bg2 content-colour">
             <img src="./images/NYCLOGO.jpg" class="card-img-top certificate-image" alt="NYC Leaders Course" style="object-fit: contain; height: 150px; padding: 20px;">
@@ -174,7 +143,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- EAGLES 2022 -->
         <div class="col-md-4">
           <div class="certificate card h-100 content-bg2 content-colour">
@@ -191,11 +160,11 @@
             </div>
           </div>
         </div>
-        
-        <!-- Scholarship 2022 -->
+
+        <!-- Edusave Scholarship 2022 -->
         <div class="col-md-4">
           <div class="certificate card h-100 content-bg2 content-colour">
-            <img src="./images/Regent.png" class="card-img-top certificate-image" alt="Edusave Scholarship" style="object-fit: contain; height: 120px; padding: 10px;">
+            <img src="./images/Regent.png" class="card-img-top certificate-image" alt="Edusave Scholarship 2022" style="object-fit: contain; height: 120px; padding: 10px;">
             <div class="card-body certificate-details">
               <a href="./images/Cert3.jpg" target="_blank" class="text-decoration-none">
                 <h5 class="card-title certificate-title goldShi">Edusave Scholarship 2022</h5>
@@ -209,7 +178,7 @@
           </div>
         </div>
 
-        <!-- Scholarship 2019 -->
+        <!-- Edusave Scholarship 2019 -->
         <div class="col-md-4">
           <div class="certificate card h-100 content-bg2 content-colour">
             <img src="./images/Regent.png" class="card-img-top certificate-image" alt="Edusave Scholarship 2019" style="object-fit: contain; height: 120px; padding: 10px;">
@@ -225,6 +194,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -234,7 +204,7 @@
       <div class="col-6 text-start">
         <h3 class="ps-5 text-center">Skills</h3>
         <ul class="ps-5">
-          <li>Programming (JavaScript, Python, HTML, CSS, and more)</li>
+          <li>Programming (JavaScript, Java, HTML, CSS)</li>
           <li>Full-Stack Development</li>
           <li>Debugging</li>
           <li>Resilience</li>
@@ -264,38 +234,16 @@
   </div>
 </div>
 
-  <br><br>
-  <!-- Footer -->
-  <footer id="footer" class="mt-auto py-3 bg-dark content-colour text-center border-top border-1 border-warning-subtle footer">
-    <p class="m-0 py-0 px-4">
-      Always look for the fun in life<br>- Alan Ng
-    </p>
-  </footer>
+<!-- Footer -->
+<footer id="footer" class="mt-auto py-3 bg-dark content-colour text-center border-top border-1 border-warning-subtle footer">
+  <p class="m-0 py-0 px-4">
+    Always look for the fun in life<br>- Alan Ng
+  </p>
+</footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-  <script src="./js/across.js"></script>
-  <script>
-        document.getElementById('dropdownBtn').addEventListener('click', function() {
-          this.classList.toggle('active');
-          document.getElementById('dropdownContent').classList.toggle('show');
-        });
-
-        // Close the dropdown if clicked outside
-        window.addEventListener('click', function(event) {
-          if (!event.target.matches('.dropdown-btn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var buttons = document.getElementsByClassName("dropdown-btn");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                    buttons[i].classList.remove('active');
-                }
-            }
-          }
-        });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="./js/pageInit.js"></script>
+<script src="./js/home.js"></script>
 </body>
 </html>
