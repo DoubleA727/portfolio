@@ -1,0 +1,120 @@
+/* =========================
+   Timeline
+========================= */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #0d6efd;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 4px solid #0d6efd;
+  border-radius: 50%;
+  top: 15px;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: #393C46;
+  border-radius: 8px;
+  box-shadow: -1px 5px 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after {
+  right: -10px;
+}
+
+.right::after {
+  left: -10px;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.left::after,
+  .timeline-item.right::after {
+    left: 21px;
+  }
+
+  .right {
+    left: 0;
+  }
+}
+
+.dropdown-btn {
+  color: #FFD700;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.dropdown-btn:hover {
+  color: #ffffff;
+}
+
+.dropdown-btn::after {
+  content: " ▼";
+  font-size: 0.8rem;
+}
+
+.dropdown-btn.active::after {
+  content: " ▲";
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.certificate {
+  transition: transform 0.3s ease;
+  box-shadow: -1px 5px 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+.certificate:hover {
+  transform: translateY(-5px);
+}
+

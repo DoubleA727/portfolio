@@ -1,0 +1,98 @@
+/* =========================
+   Fonts & Base
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.bg-colour {
+  background-color: #22242A;
+}
+
+/* =========================
+   Navbar
+========================= */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+}
+
+.nav-colour {
+  background-color: #042287;
+}
+
+.changefontnav {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.goldShi {
+  color: #E8BB53;
+}
+
+.navbar .nav-link {
+  color: #A6B0D9;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link.active {
+  color: #E8BB53;
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover {
+  color: #E8BB53;
+}
+
+/* =========================
+   Typography & Content
+========================= */
+.nameFont {
+  font-size: 50px;
+}
+
+.content-colour {
+  color: #A6B0D9;
+}
+
+.content-bg {
+  background-color: #2E3038;
+}
+
+.content-bg2 {
+  background-color: #393C46;
+}
+
+.intro-text,
+.content-text {
+  font-size: large;
+  font-family: 'Roboto', sans-serif;
+}
+
+.startFont {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* =========================
+   Borders
+========================= */
+.custom-border {
+  border: 4px solid #E8BB53;
+}
+
+.custom-inner-border {
+  border: 2px solid #E8BB53;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: -100px;
+  width: 100%;
+  transition: bottom 0.3s ease;
+}
+
+.footer.visible {
+  bottom: 0;
+}
