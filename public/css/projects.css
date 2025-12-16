@@ -34,3 +34,9 @@
   object-fit: contain; /* scale down to fit */
   background-color: #393C46; /* fill empty space */
 }
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: rgb(0,0,0,0.5);
+  border-radius: 50%;
+  margin: 5%;
+}
