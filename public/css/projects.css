@@ -11,7 +11,7 @@
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 aspect ratio */
-  overflow: hidden;
+  overflow: hidden; 
   border-radius: 1rem;
   background-color: #393C46; /* background for empty space */
 }
