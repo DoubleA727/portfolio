@@ -11,7 +11,7 @@
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 aspect ratio */
-  overflow: hidden;
+  overflow: hidden; 
   border-radius: 1rem;
   background-color: #393C46; /* background for empty space */
 }
@@ -33,4 +33,10 @@
   transform: translate(-50%, -50%);
   object-fit: contain; /* scale down to fit */
   background-color: #393C46; /* fill empty space */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: rgb(0,0,0,0.5);
+  border-radius: 50%;
+  margin: 5%;
 }

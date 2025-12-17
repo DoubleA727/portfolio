@@ -86,10 +86,12 @@
   cursor: pointer;
   position: relative;
   transition: all 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .dropdown-btn:hover {
   color: #ffffff;
+  transform: translateY(-5px);
 }
 
 .dropdown-btn::after {
@@ -109,6 +111,7 @@
   display: block;
 }
 
+/* certificates */
 .certificate {
   transition: transform 0.3s ease;
   box-shadow: -1px 5px 5px 6px rgba(0, 0, 0, 0.1);

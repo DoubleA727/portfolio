@@ -1,0 +1,11 @@
+Model Information:
+* title:	Regional Campuses - T-Shirt - Blue
+* source:	https://sketchfab.com/3d-models/regional-campuses-t-shirt-blue-9ce2f12ea09b4b258bdc771b17d55a82
+* author:	Connections XR (https://sketchfab.com/connectionsxr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Regional Campuses - T-Shirt - Blue" (https://sketchfab.com/3d-models/regional-campuses-t-shirt-blue-9ce2f12ea09b4b258bdc771b17d55a82) by Connections XR (https://sketchfab.com/connectionsxr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
