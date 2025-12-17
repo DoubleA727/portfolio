@@ -1,4 +1,5 @@
 // 3D Merch Section
+//-------------------------------------------------------------------------------------------------------------
 // import the three
 import * as THREE from 'https://unpkg.com/three@0.181.2/build/three.module.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.181.2/examples/jsm/loaders/GLTFLoader.js?module';
@@ -6,9 +7,9 @@ import { OrbitControls } from 'https://unpkg.com/three@0.181.2/examples/jsm/cont
 
 // paths to the modesl
 const modelPaths = {
-  'model-DB-Festival-Shirt': '../public/models/db-festival-shirt-2021/scene.gltf',
-  'model-MMA-Team-Shirt': '../public/models/mma-team-shirt/scene.gltf',
-  'model-Track-Nationals-Jersey': '../public/models/track-nationals-jersey/scene.gltf',
+  'model-DB-Festival-Shirt': '../models/db-festival-shirt-2021/scene.gltf',
+  'model-MMA-Team-Shirt': '../models/mma-team-shirt/scene.gltf',
+  'model-Track-Nationals-Jersey': '../models/track-nationals-jersey/scene.gltf',
 };
 
 function init3DModel(container) {
@@ -127,3 +128,4 @@ function initCarouselModels() {
 // Start
 document.addEventListener('DOMContentLoaded', initCarouselModels);
 //End of 3D Merch section
+//-------------------------------------------------------------------------------------------------------------
