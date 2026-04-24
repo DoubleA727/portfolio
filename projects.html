@@ -8,9 +8,98 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/pageInit.css">
   <link rel="stylesheet" href="./css/projects.css">
+
+  <style>
+    /* Delivery Map Section Styles */
+    #delivery-section .delivery-wrapper {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 193, 7, 0.15);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    #delivery-section #map {
+      height: 420px;
+      border-radius: 0.75rem;
+      border: 2px solid rgba(255, 193, 7, 0.2);
+      z-index: 1;
+    }
+
+    #delivery-section #etaForm .form-control {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      color: #fff;
+      border-radius: 0.5rem;
+    }
+
+    #delivery-section #etaForm .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    #delivery-section #etaForm .form-control:focus {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 193, 7, 0.6);
+      box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.15);
+      color: #fff;
+    }
+
+    #delivery-section #etaForm .btn-estimate {
+      background: linear-gradient(135deg, #c8a415, #e6c619);
+      color: #1a1a1a;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    #delivery-section #etaForm .btn-estimate:hover {
+      background: linear-gradient(135deg, #e6c619, #f0d640);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    }
+
+    #delivery-section .eta-results {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    #delivery-section .eta-results .eta-card {
+      flex: 1;
+      min-width: 140px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 193, 7, 0.15);
+      border-radius: 0.6rem;
+      padding: 0.75rem 1rem;
+      text-align: center;
+    }
+
+    #delivery-section .eta-results .eta-card .eta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.6;
+      margin-bottom: 0.25rem;
+    }
+
+    #delivery-section .eta-results .eta-card .eta-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    #delivery-section #msg .alert {
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body class="bg-colour">
   
@@ -139,12 +228,75 @@
                 </p>
               </div>
             </div> <!-- End of AI Review Analyser  -->
+
+            <!-- ========== DELIVERY ETA MAP ========== -->
+            <div class="project-container mb-5" id="delivery-section">
+              <h2 class="text-center fs-3 mb-4 goldShi"><strong>Delivery ETA Map</strong></h2>
+
+              <div class="delivery-wrapper mx-auto" style="max-width: 800px;">
+                <p class="text-center mb-3" style="font-size: 0.9rem;">
+                  Estimate delivery time from Singapore Polytechnic to any address in Singapore.
+                </p>
+
+                <form id="etaForm" class="row g-2 mb-3">
+                  <div class="col-md-8 col-lg-9">
+                    <input
+                      type="text"
+                      id="destination"
+                      class="form-control"
+                      placeholder="Enter a Singapore delivery address"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4 col-lg-3 d-grid">
+                    <button type="submit" class="btn btn-estimate">Estimate</button>
+                  </div>
+                </form>
+
+                <div id="msg" class="mb-2"></div>
+
+                <div class="eta-results mb-3">
+                  <div class="eta-card">
+                    <div class="eta-label">Driving ETA</div>
+                    <div class="eta-value goldShi" id="etaText">—</div>
+                  </div>
+                  <div class="eta-card">
+                    <div class="eta-label">Distance</div>
+                    <div class="eta-value goldShi" id="distText">—</div>
+                  </div>
+                  <div class="eta-card">
+                    <div class="eta-label">Delivery Buffer</div>
+                    <div class="eta-value goldShi" id="bufferText">—</div>
+                  </div>
+                </div>
+
+                <div id="map"></div>
+              </div>
+
+              <div class="project-content text-center mt-4">
+                <p class="fs-6">
+                  This feature calculates real-time driving ETA from Singapore Polytechnic to any address 
+                  in Singapore using open-source mapping APIs:
+                </p>
+                <ul class="text-start mx-auto" style="max-width: 600px; list-style-position: inside;">
+                  <li>Integrated Leaflet.js for interactive map rendering with OpenStreetMap tiles</li>
+                  <li>Used Nominatim API for geocoding addresses within Singapore's bounding box</li>
+                  <li>Implemented OSRM routing to compute driving distance and duration</li>
+                  <li>Draws the actual driving route on the map with dynamic marker placement</li>
+                </ul>
+                <p class="fs-6">
+                  Building this deepened my understanding of geolocation APIs, asynchronous JavaScript, 
+                  and working with third-party REST services.
+                </p>
+              </div>
+            </div>
+            <!-- ========== END DELIVERY ETA MAP ========== -->
+
             <!-- 3D Merch Preview -->
             <div class="project-container mb-5">
               <h2 class="text-center fs-3 mb-4 goldShi"><strong>3D Merch Preview</strong></h2>
               <div id="merchCarousel" class="carousel slide mx-auto d-block" data-bs-ride="false" data-bs-interval="false" data-bs-touch="false" style="width: 85%;">
                 <div class="carousel-inner">
-                  <!-- slides of merch -->
                   <div class="carousel-item active">
                     <div class="d-flex flex-column align-items-center text-center px-4">
                       <div id="model-DB-Festival-Shirt" class="model-canvas" style="width: 100%; max-width: 600px; height: 500px;"></div>
@@ -161,7 +313,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#merchCarousel" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon bg-dark p-3"></span>
                 </button>
@@ -216,7 +367,7 @@
                   The hands-on nature of this project deepened my appreciation for product design and manufacturing processes.
                 </p>
               </div>
-            </div> <!-- End 3D Print Tab -->
+            </div>
 
             <!-- Project Effective Care -->
             <div class="project-container mb-5">
@@ -264,7 +415,7 @@
                   The experience was profoundly rewarding as we saw a positive impact from our training sessions.
                 </p>
               </div>
-            </div> <!-- End PEC Tab -->
+            </div>
           </div> <!-- End Others Tab -->
         </div> <!-- End Tabs -->
       </div> <!-- End Container -->
@@ -281,6 +432,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   <script src="./js/pageInit.js"></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <script type="module" src="./js/projects.js"></script>
 </body>
 </html>
